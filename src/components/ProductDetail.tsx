@@ -27,19 +27,19 @@ export default function ProductDetail() {
 
   return (
     <div className="max-w-6xl mx-auto pb-20">
-      <Link to="/" className="inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-indigo-600 transition-colors mb-12">
+      <Link to="/" className="inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-indigo-600 transition-colors mb-6 md:mb-12">
         <ArrowLeft className="w-4 h-4" />
-        Roll Back
+        Rollback to Database
       </Link>
 
       <div className="flex flex-col lg:flex-row gap-8 xl:gap-20">
         {/* Left: Detailed Visualization */}
-        <div className="flex-1 space-y-8">
+        <div className="flex-1 space-y-6 md:space-y-8">
           <motion.div 
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="relative rounded-[2.5rem] overflow-hidden shadow-2xl shadow-indigo-900/10 aspect-video lg:aspect-auto h-[400px] lg:h-[600px] bg-slate-100"
+            className="relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl shadow-indigo-900/10 aspect-square sm:aspect-video lg:aspect-auto lg:h-[600px] xl:h-[700px] bg-slate-100"
           >
             <img 
               src={item.image} 
@@ -48,30 +48,30 @@ export default function ProductDetail() {
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent"></div>
-            <div className="absolute bottom-8 left-8 flex items-center gap-3">
-               <div className="bg-white/20 backdrop-blur-xl border border-white/30 p-3 rounded-2xl">
-                  <Box className="w-6 h-6 text-white" />
+            <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 flex items-center gap-3">
+               <div className="bg-white/20 backdrop-blur-xl border border-white/30 p-2 md:p-3 rounded-2xl">
+                  <Box className="w-5 h-5 md:w-6 md:h-6 text-white" />
                </div>
                <div className="text-white">
-                  <p className="text-[10px] font-black uppercase tracking-widest leading-none opacity-60">Authentication Tag</p>
-                  <p className="text-sm font-bold tracking-tight">Verified Engineering Unit</p>
+                  <p className="text-[8px] md:text-[10px] font-black uppercase tracking-widest leading-none opacity-60">Authentication Tag</p>
+                  <p className="text-xs md:text-sm font-bold tracking-tight">Verified Engineering Unit</p>
                </div>
             </div>
-            <div className="absolute top-8 left-8">
-               <span className="bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-xl text-[10px] font-black tracking-widest uppercase text-indigo-600 shadow-xl border border-white">
+            <div className="absolute top-6 left-6 md:top-8 md:left-8">
+               <span className="bg-white/90 backdrop-blur-md px-3 py-1 md:px-4 md:py-1.5 rounded-xl text-[9px] md:text-[10px] font-black tracking-widest uppercase text-indigo-600 shadow-xl border border-white">
                  {item.category}
                </span>
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-2 gap-4">
-             <div className="bg-white p-6 rounded-3xl border border-slate-200">
+          <div className="grid grid-cols-2 gap-3 md:gap-4">
+             <div className="bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl border border-slate-200">
                 <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Batch</p>
-                <p className="font-bold text-slate-800">PRE-PRODUCTION-A2</p>
+                <p className="text-sm md:font-bold text-slate-800">PRE-PRODUCTION-A2</p>
              </div>
-             <div className="bg-white p-6 rounded-3xl border border-slate-200">
+             <div className="bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl border border-slate-200">
                 <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Region</p>
-                <p className="font-bold text-slate-800">GLOBAL REGISTRY</p>
+                <p className="text-sm md:font-bold text-slate-800">GLOBAL REGISTRY</p>
              </div>
           </div>
         </div>
